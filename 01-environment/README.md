@@ -35,5 +35,6 @@ node_moduleというフォルダが新たに作成され、そこにpackage.json
 
     npm run dev
 
-http://localhost:8080/へアクセスすると、簡単なWelcome画面が表示されているはずです。  
+http://localhost:8080/  
+へアクセスすると、簡単なWelcome画面が表示されているはずです。  
 Good luck🍁
