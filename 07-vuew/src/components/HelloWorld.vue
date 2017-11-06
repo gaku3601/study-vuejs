@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h1>{{ counter }}</h1>
+    <h1>{{ counter.result }}</h1>
     <button @click="add_counter()">増やす</button>
     <button @click="reduce_counter()">減らす</button>
   </div>
@@ -24,7 +24,7 @@ export default {
       types.REDUCE_COUNTER
     ]),
     add_counter: function () {
-      this.ADD_COUNTER(this.$store.state.counter + 1)
+      this.ADD_COUNTER(this.$store.state.counter.result + 1)
     },
     reduce_counter: function () {
       this.REDUCE_COUNTER()
