@@ -1,3 +1,7 @@
 export const ADD_COUNTER = 'ADD_COUNTER'
 export const REDUCE_COUNTER = 'REDUCE_COUNTER'
 export const COUNTER = 'COUNTER'
+
+export const ADD_COUNTER2 = 'ADD_COUNTER2'
+export const REDUCE_COUNTER2 = 'REDUCE_COUNTER2'
+export const COUNTER2 = 'COUNTER2'

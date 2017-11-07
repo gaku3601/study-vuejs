@@ -4,6 +4,9 @@
     <h1>{{ counter.result }}</h1>
     <button @click="add_counter()">増やす</button>
     <button @click="reduce_counter()">減らす</button>
+    <h1>{{ counter2.result }}</h1>
+    <button @click="add_counter2()">増やす</button>
+    <button @click="reduce_counter2()">減らす</button>
   </div>
 </template>
 
@@ -21,17 +24,25 @@ export default {
   methods: {
     ...mapActions([
       types.ADD_COUNTER,
-      types.REDUCE_COUNTER
+      types.REDUCE_COUNTER,
+      types.ADD_COUNTER2,
+      types.REDUCE_COUNTER2
     ]),
     add_counter: function () {
       this.ADD_COUNTER(this.$store.state.counter.result + 1)
     },
     reduce_counter: function () {
       this.REDUCE_COUNTER()
+    },
+    add_counter2: function () {
+      this.ADD_COUNTER2(this.$store.state.counter2.result + 1)
+    },
+    reduce_counter2: function () {
+      this.REDUCE_COUNTER2()
     }
   },
   computed: {
-    ...mapState(['counter'])
+    ...mapState(['counter', 'counter2'])
   }
 }
 </script>
