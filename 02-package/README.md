@@ -133,10 +133,4 @@ https://vuetifyjs.com/vuetify/quick-start
 完全コピペですが、これでvue.jsアプリケーションを起動してあげれば美麗なレイアウトが表示されると思います。  
 良さそうなpackageを見つけたらnpm installをすれば簡単に組み込むことができます。  
   
-また、上の例ではHelloWorld.vueを編集していますが、App.vueにv-appで囲ってやるといい感じにデザインが適用されます。
-
-    <template>
-      <v-app id="app">
-        <router-view/>
-      </v-app>
-    </template>
+※また、上の例ではv-appで囲っていますが、これを行うといい感じのデザインになるため、忘れずつけておきましょう。
