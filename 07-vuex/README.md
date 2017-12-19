@@ -1,4 +1,4 @@
-# 07-vuew
+# 07-vuex
 
 > A Vue.js project
 
