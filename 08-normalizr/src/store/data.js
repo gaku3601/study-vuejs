@@ -15,7 +15,7 @@ export default{
         {
           'counter': 1,
           'building': [
-            {'id': 1, 'name': 'test', tag: [{'id': 1, name: 'tag1'}]}
+            {'id': 1, 'name': 'test', 'tag': [{'id': 1, 'name': 'tag1'}]}
           ]
         }
       ]
