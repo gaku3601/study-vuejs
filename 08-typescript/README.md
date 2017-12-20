@@ -1,9 +1,4 @@
-# 課題
-・vuex保持のstateをv-modelレベルで編集できるようにする。
-・DBから取得したデータを可能な限り楽に格納する。
-・DBへの格納を可能な限り楽に格納する。
-
-# 08-normalizr
+# 08-typescript
 
 > A Vue.js project
 

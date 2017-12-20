@@ -16,32 +16,18 @@
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-      <input v-model="counter"></input>
     </ul>
   </div>
 </template>
 
-<script>
-import {mapActions} from 'vuex'
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
-  methods: {
-    ...mapActions('data', ['fetchData'])
-  },
-  computed: {
-    counter: {
-      get () { return this.$store.state.data.counter },
-      set (val) { this.$store.commit('data/updateCounter', val) }
-    }
-  },
-  created: function () {
-    this.fetchData()
-  }
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+@Component({
+  name: 'hello'
+})
+export default class Hello extends Vue {
+  msg = 'Welcome to Your Vue.js App'
 }
 </script>
 
