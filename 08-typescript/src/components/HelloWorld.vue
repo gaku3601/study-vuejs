@@ -22,6 +22,9 @@
     <button @click="actionDec">-</button>
     <button @click="mutationInc">mutation直で+</button>
     <button @click="mutationDec">mutation直で-</button>
+    <button @click="addTodo">todoを追加</button>
+    <h1>ToDoリスト</h1>
+    {{todos}}
   </div>
 </template>
 
@@ -37,6 +40,9 @@ export default class Hello extends Vue {
   get counter () {
     return this.$store.state.counter.count
   }
+  get todos () {
+    return this.$store.state.todos.todos
+  }
 
   mutationInc () {
     this.$store.commit('counter/inc', 1)
@@ -49,6 +55,9 @@ export default class Hello extends Vue {
   }
   actionDec () {
     this.$store.dispatch('counter/dec')
+  }
+  addTodo () {
+    this.$store.commit('todos/add', 'aaaa')
   }
 }
 </script>
