@@ -17,6 +17,11 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    {{ counter }}
+    <button @click="actionInc">+</button>
+    <button @click="actionDec">-</button>
+    <button @click="mutationInc">mutation直で+</button>
+    <button @click="mutationDec">mutation直で-</button>
   </div>
 </template>
 
@@ -28,6 +33,23 @@ import Component from 'vue-class-component'
 })
 export default class Hello extends Vue {
   msg = 'Welcome to Your Vue.js App'
+
+  get counter () {
+    return this.$store.state.counter.count
+  }
+
+  mutationInc () {
+    this.$store.commit('counter/inc', 1)
+  }
+  actionInc () {
+    this.$store.dispatch('counter/inc', 1)
+  }
+  mutationDec () {
+    this.$store.commit('counter/dec')
+  }
+  actionDec () {
+    this.$store.dispatch('counter/dec')
+  }
 }
 </script>
 
