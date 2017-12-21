@@ -1,20 +1,17 @@
 import {GetterTree, MutationTree, ActionTree, ActionContext} from "vuex"
+import todo from './todo' 
 
 export interface State {
-    todos: string[]
-    idx: number
+    todos: todo[]
 }
 
 const state: State = {
   todos: [],
-  idx: 0
 }
 
 const mutations = <MutationTree<State>> {
   add(state: State, text: string) {
-    console.log(text)
-    console.log(state)
-    state.todos.push(text)
+    state.todos.push(new todo)
   }
 };
 

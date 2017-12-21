@@ -24,7 +24,11 @@
     <button @click="mutationDec">mutation直で-</button>
     <button @click="addTodo">todoを追加</button>
     <h1>ToDoリスト</h1>
-    {{todos}}
+    <button @click="updateTodo">todoUpdate</button>
+    <div v-for="v in todos">
+      {{v}}
+      <input type="text" @input="e => { v.update(e.target.value)}"></input>
+    </div>
   </div>
 </template>
 
@@ -58,6 +62,10 @@ export default class Hello extends Vue {
   }
   addTodo () {
     this.$store.commit('todos/add', 'aaaa')
+  }
+  updateTodo (e: Event) {
+    console.log(e)
+    this.$store.commit('todos/todo/update', 'aaaa')
   }
 }
 </script>
