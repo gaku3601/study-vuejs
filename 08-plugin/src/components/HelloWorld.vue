@@ -31,6 +31,10 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created: function () {
+    // インスタンスメソッドの出力
+    this.$myMethod()
   }
 }
 </script>

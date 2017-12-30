@@ -7,6 +7,7 @@ import MyPlugin from './plugin'
 
 Vue.use(MyPlugin)
 Vue.config.productionTip = false
+Vue.myGMethod() // グローバルメソッドの出力
 
 /* eslint-disable no-new */
 new Vue({
